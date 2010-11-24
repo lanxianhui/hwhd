@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> ChannelNum </TITLE>
+
+<script>
+document.onkeypress = grabEvent;
+document.onirkeypress = grabEvent;
+document.onsystemevent = grabEvent;
+function grabEvent(event) {	
+	var keycode = event.which;
+	var code="";
+	if(keycode > 47 && keycode < 58) {
+		code="KEY_NUMERIC";
+	}
+	switch(code) {
+		case "KEY_NUMERIC":
+			var value = keycode - 48;
+			if(channelString.length<3){
+				channelString=channelString+value;
+			}	
+			showChannelNumber(channelString);			
+			return 0;
+			break
+	}
+}	
+var timer1=-1;
+var overlayTimer=-1;
+var channelString="";
+var turnNumber="";
+function init(){
+	var numberString=window.location.href.split("?")[1];
+	$("channelNumText").style.fontSize="100px";
+	channelString=numberString;
+	numberString=tomyString(numberString);
+	$("channelNumText").innerText=numberString;
+	turnNumber=numberString;
+	clearTimeout(timer1);
+	timer1 =setTimeout("gotoChannel()",1500);	
+}	
+
+function showChannelNumber(channelString){
+	var numberString=tomyString(channelString);
+	$("channelNumText").innerText=numberString;
+	turnNumber=numberString;
+	clearTimeout(timer1);
+	timer1 =setTimeout("gotoChannel()",1500);	
+}
+
+function tomyString(numberString){
+	if(numberString.length==1) numberString="00"+numberString;
+	if(numberString.length==2) numberString="0"+numberString;	
+	return numberString;
+}
+
+function gotoChannel(numberString){
+	var data0=iPanel.eventFrame.channelInfo;
+	var data1=iPanel.eventFrame.HDchannelInfo;
+	var data0True=false;//是否在标清存在该频道,false表示不存在
+	var data1True=false;//是否在高清存在该频道,false表示不存在
+	var mainFrameUrl=eval(iPanel.mainFrame.location);
+		for(var m=0;m<data0.length;m++){
+			if(data0[m].ChannelID==turnNumber){
+				data0True=true;	
+				iPanel.mainFrame.location="HD_playliveControl.jsp?currentNum="+m;
+				iPanel.overlayFrame.close();
+				return;
+			}else{
+				data0True=false;
+				}	
+			}	
+		for(var m=0;m<data1.length;m++){
+			if(data1[m].ChannelID==turnNumber){
+				data1True=true;
+				iPanel.mainFrame.location="HD_playliveControl.jsp?source=hd&currentNum="+m;
+				iPanel.overlayFrame.close();
+				return;
+			}else{
+				data1True=false;
+			}	
+		}
+		if(data0True==false&&data1True==false){	
+			if(mainFrameUrl.indexOf("play.jsp")>-1||mainFrameUrl.indexOf("HD_playliveControl.jsp")>-1||mainFrameUrl.indexOf("HD_playTvodControl.jsp")>-1){
+					iPanel.mainFrame.noChannel(turnNumber);
+			}else{
+				iPanel.mainFrame.location="HD_infoDisplay.jsp?ERROR_ID=126";
+				//iPanel.overlayFrame.close()
+			}	
+			iPanel.overlayFrame.close();	
+		}	
+}
+
+function $(id) {
+	return document.getElementById(id);
+}
+
+function exit(){
+	clearTimeout(timer1);
+	iPanel.overlayFrame.close();
+}	
+
+</script>
+
+ </HEAD>
+
+ <BODY style="background-color:transparent;" onLoad="init()" onUnload="exit()">
+	<div id="channelNumber" style="position:absolute; left:0px; top:0px; height:100px; width:347px; color:#00AC0C; font-size:100px; text-align:100px; overflow:hidden; -webkit-transition-duration:1000ms; ">
+			<table width='347' border='0' cellspacing='0' cellpadding='0' >
+				<tr>
+					<td height='100'  colspan='2' align='right' style='font-size:100px; color:#00AC0C;' id='channelNumText'></td>
+				</tr>
+			</table>
+	</div>
+ </BODY>
+</HTML>

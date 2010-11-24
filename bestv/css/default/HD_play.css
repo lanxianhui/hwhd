@@ -1,0 +1,417 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+}
+
+body {
+	background-color: transparent;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+#menu {
+	position: absolute;
+	top: 450px;
+	left: 191px;
+	width: 1001px;
+	height: 200px;
+	opacity: 0;
+	-webkit-transition-duration: 200ms;
+	text-align: center
+}
+
+/*#title{position:absolute; top:0; left:69px; width:765px; height:51px; background:url(../../images/play/vod_menu_title.png) no-repeat; z-index:2;}*/
+#shortcuts {
+	position: absolute;
+	top: 3px;
+	left: 780px;
+	width: 99px;
+	height: 45px;
+	background-repeat: no-repeat;
+	z-index: 2;
+	visibility: hidden;
+}
+
+#shortprogress {
+	position: absolute;
+	top: 24px;
+	left: 500px;
+	width: 182px;
+	height: 27px;
+	background-image: url(../../images/play/vod_short_progress.png);
+	background-repeat: no-repeat;
+	z-index: 2;
+}
+
+#shortprogress #shortprogresslinetd {
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 0px;
+	height: 19px;
+	background: url(../../images/play/vod_progress_bg.jpg) repeat-x;
+}
+
+#programtime {
+	position: absolute;
+	top: 20px;
+	left: 682px;
+	width: 178px;
+	height: 33px;
+	line-height: 32px;
+	text-align: center;
+	color: #FFFFFF;
+	font-family: 黑体;
+	font-size: 24px;
+	z-index: 2;
+}
+
+#panel {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	width: 901px;
+	height: 159px;
+	background: url(../../images/play/vod_menu.png) no-repeat;
+}
+
+#seek {
+	position: absolute;
+	top: 136px;
+	left: 6px;
+	width: 889px;
+	height: 61px;
+	background: url(../../images/play/vod_seektime.png) no-repeat;
+	visibility: visible;
+}
+
+#menu #playcurrtime {
+	position: absolute;
+	top: 20px;
+	left: 430px;
+	width: 164px;
+	height: 30px;
+	font-size: 24px;
+	color: #ffffff;
+	line-height: 30px;
+	z-index: 2;
+	visibility: hidden
+}
+
+#menu #programname {
+	position: absolute;
+	top: 22px;
+	left: 0px;
+	width: 431px;
+	height: 30px;
+	font-size: 28px;
+	color: #ffffff;
+	line-height: 30px;
+	z-index: 2;
+	text-align: left;
+	padding-left: 50px;
+}
+
+#playstatus {
+	position: absolute;
+	top: 50px;
+	left: 927px;
+	width: 247px;
+	height: 90px;
+	z-index: 2;
+	visibility: hidden
+}
+
+#panel #information {
+	position: absolute;
+	top: 70px;
+	left: 20px;
+	width: 900px;
+	height: 60px;
+	visibility: visible;
+}
+
+#panel #information table {
+	border: 0;
+	width: 860px;
+	height: 60px;
+}
+
+#panel #seekprogress {
+	position: absolute;
+	top: 86px;
+	left: 115px;
+	width: 669px;
+	height: 30px;
+	color: #BFE4E6;
+	visibility: hidden;
+}
+
+#panel #seekprogress #starttime {
+	position: absolute;
+	top: 5px;
+	width: 82px;
+	height: 22px;
+	text-align: right;
+	left: -50px;
+	font-size: 24px
+}
+
+#panel #seekprogress #progresslinetable {
+	position: absolute;
+	top: 4px;
+	left: 56px;
+	width: 555px;
+	height: 27px;
+	background: url(../../images/play/vod_progress.png) no-repeat;
+	visibility: hidden;
+}
+
+#panel #seekprogress #progressfocus {
+	position: absolute;
+	top: -8px;
+	left: 46px;
+	width: 49px;
+	height: 48px;
+	background: url(../../images/play/vod_seek_td_focus.png) no-repeat;
+	visibility: hidden;
+}
+
+#panel #seekprogress #endtime {
+	position: absolute;
+	top: 6px;
+	left: 617px;
+	width: 75px;
+	height: 22px;
+	font-size: 24px
+}
+
+#panel #seekprogress #progresslinetable td {
+	width: 18px;
+	height: 19px;
+	background: url(../../images/play/vod_seek_td.png) no-repeat;
+}
+
+#panel #seekprogress #progressfocus #progresstime {
+	position: absolute;
+	top: 46px;
+	left: -15px;
+	width: 60px;
+	height: 20px;
+	text-align: center;
+	color: #ffffff;
+}
+
+#panel #seekprogress #progressline {
+	position: absolute;
+	top: 4px;
+	left: 56px;
+	width: 555px;
+	height: 27px;
+	background: url(../../images/play/vod_progress.png) no-repeat;
+	visibility: visible;
+}
+
+#panel #seekprogress #progressline #progresslinetd {
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 0px;
+	height: 19px;
+	background: url(../../images/play/vod_progress_bg.jpg) repeat-x;
+}
+
+#seek #seektip {
+	position: absolute;
+	top: 12px;
+	left: 50px;
+	width: 800px;
+	height: 30px;
+	line-height: 30px;
+	color: #036;
+	visibility: visible;
+}
+
+#seek #seektip td {
+	border: 0;
+	width: 265px;
+	height: 30px;
+	text-align: center;
+	font-size: 26px
+}
+
+#seek #seektime {
+	position: absolute;
+	top: 16px;
+	left: 49px;
+	width: 800px;
+	height: 30px;
+	visibility: hidden;
+}
+
+#seek #seektime td {
+	font-size: 26px;
+	text-align: center;
+}
+
+#seek #seektime td.ta {
+	width: 180px;
+	color: #333
+}
+
+#seek #seektime td.tb {
+	width: 40px;
+	color: #333;
+}
+
+#seek #seektime td.tc {
+	width: 400px;
+	color: #333;
+	text-align: center;
+}
+
+#seek #seektime td.tf {
+	width: 70px;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: white;
+}
+
+#tip {
+	position: absolute;
+	top: 120px;
+	left: 900px;
+	width: 180px;
+	height: 40px;
+	color: white;
+	background-color: blue;
+	line-height: 40px;
+	font-size: 24px;
+	visibility: hidden;
+	text-align: center;
+}
+
+#readTips {
+	-webkit-transform: scale(0);
+	-webkit-transition-duration: 300ms;
+	z-index: 5;
+}
+
+div.progresstable {
+	position: absolute;
+	top: 2px;
+	width: 555px;
+	height: 27px;
+	left: 0px;
+	visibility: visible;
+}
+
+#exitWindow {
+	position: absolute;
+	top: 116px;
+	left: 354px;
+	width: 571px;
+	height: 262px;
+	-webkit-transition-duration: 300ms;
+	-webkit-transform: scale(0);
+	background-image: url(../../images/play/vod_exitbg.png);
+	background-repeat: no-repeat;
+	padding-top: 23px;
+}
+
+#exitWindow1 {
+	position: absolute;
+	top: 196px;
+	left: 488px;
+	width: 304px;
+	height: 157px;
+	-webkit-transition-duration: 300ms;
+	-webkit-transform: scale(0);
+	background-image: url(../../images/play/vod_exitbg1.png);
+	background-repeat: no-repeat;
+	padding-top: 23px;
+}
+
+
+#exitWindow .sty0 {
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#seriesTips {
+	position: absolute;
+	left: 274px;
+	top: 220px;
+	z-index: 110;
+	width:720px;
+	height:250px;
+	-webkit-transition-duration: 100ms;
+	visibility:hidden;
+}
+
+#seresName {
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:28px;
+	width:720px;
+	font-size:28px;
+	font:黑体;
+	color:#FFFFFF;
+	text-align:center;
+}
+
+#seresNextTips {
+	position:absolute;
+	top:100px;
+	left:245px;
+	height:28px;
+	width:720px;
+	font-size:28px;
+	font:黑体;
+	color:#ffffff;
+	text-align:left;
+}
+
+#seresSecond {
+	position:absolute;
+	top:100px;
+	left:200px;
+	height:28px;
+	width:720px;
+	font-size:28px;
+	font:黑体;
+	color:#edd400;
+	text-align:left;
+}
+
+#seresNext {
+	position:absolute;
+	top:155px; 
+	left:70px; 
+	width:288px; 
+	height:48px; 
+	background:url("../../images/play/seresNext.png") no-repeat;
+}
+
+#seresReturn {
+	position:absolute;
+	top:155px; 
+	left:362px; 
+	width:288px; 
+	height:48px; 
+	background:url("../../images/play/seresReturn.png") no-repeat;
+}
+
+#seresFocus {
+	position:absolute;
+	top:152px; 
+	left:69px; 
+	width:288px; 
+	height:53px; 
+	background:url("../../images/play/seresFocus.png") no-repeat;
+	z-index:10;
+}

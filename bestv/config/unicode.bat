@@ -1,0 +1,1 @@
+native2ascii -encoding utf8 epg-config_cn.properties epg-config.properties

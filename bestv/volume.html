@@ -1,0 +1,106 @@
+ <HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> ChannelNum </TITLE>
+<script>
+var  volumeValue=0;
+
+document.onkeypress = grabEvent;
+document.onirkeypress = grabEvent;
+document.onsystemevent = grabEvent;
+function grabEvent(event) {	
+	keycode=event.which;
+	switch(keycode){
+		case 3:
+		case 37://×ó
+			changeVolumeValue(-1);
+			return 0;
+			break;
+	    case 4:
+		case 39://ÓÒ
+			changeVolumeValue(1);
+			return 0;	
+			break;
+		case 13:
+			iPanel.mainFrame.showHiddenInfor();
+			volumePage.minimize();
+			return 0;
+			break;	
+	}
+}
+
+var mp=new MediaPlayer();
+var volumePage="";
+function init(){
+//	$("volume").style.opacity=1;
+	volumePage=iPanel.pageWidgets.getByName("volumePage");
+	$("volume").style.webkitTransform="scale(1)";
+	volumeValue=mp.getVolume();
+	volumeValue=Math.round(volumeValue/10)*10;
+	showValueImage();
+	$("volumeNum").src="images/volume/p"+volumeValue+".png";
+}
+
+function changeVolumeValue(num){
+	if((volumeValue==100&&num>0)||(volumeValue==0&&num<0)) return;	
+	volumeValue+=num*10;
+	$("volumeNum").src="images/volume/p"+volumeValue+".png";
+	showValueImage();
+	mp.setVolume(volumeValue);
+	//var volumePage=iPanel.pageWidgets.getByName("volumePage");
+	iPanel.mainFrame.hiddenVolume();
+}
+
+function showValueImage(){
+	if(volumeValue<20) $("volumeSize").src="images/volume/yl_pic1_0.png";
+	if(volumeValue>10&&volumeValue<50) $("volumeSize").src="images/volume/yl_pic1_1.png";
+	if(volumeValue<90&&volumeValue>40) $("volumeSize").src="images/volume/yl_pic1_2.png";
+	if(volumeValue>80) $("volumeSize").src="images/volume/yl_pic1_3.png";
+	if(volumeValue==100){
+		$("volumLeft").style.left="165px";
+		$("volumeValue0").src="images/volume/1.png";
+		$("volumeValue1").src="images/volume/0.png";
+		$("volumeValue2").src="images/volume/0.png";	
+		$("volumeMute").src="images/volume/tm.gif";
+	}
+	else if(volumeValue==0){
+		$("volumeValue0").src="images/volume/tm.gif";
+		$("volumeValue2").src="images/volume/0.png";
+		$("volumeValue1").src="images/volume/tm.gif";
+		$("volumeMute").src="images/volume/yl_pic1_23.png";
+	}	
+	else{
+		$("volumLeft").style.left="170px";
+		$("volumeValue0").src="images/volume/tm.gif";
+		$("volumeValue1").src="images/volume/"+(volumeValue/10)+".png";
+		$("volumeValue2").src="images/volume/0.png";
+		$("volumeMute").src="images/volume/tm.gif";
+	}	
+}	
+
+function $(id){
+	return document.getElementById(id);
+}
+
+function exit(){
+	iPanel.mainFrame.showHiddenInfor();
+	volumePage.minimize();
+}
+</script>
+
+ </HEAD>
+ <style>
+	#volume{position:absolute; left:0px; top:0px; height:406px; width:406px; background:url(images/volume/yl_bg.png) center  no-repeat; -webkit-transition-duration:300ms;-webkit-transform:scale(0);}
+</style>
+ <BODY style="background-color:transparent;" onLoad="init()" onUnload="exit()">
+ 	<div id="volume">
+ 		<div style="position:absolute; left:75px; top:75px; height:132px; width:250px;"><img id="volumeNum" src="images/volume/0.png" /></div>
+		<div style="position:absolute; left:183px; top:10px; height:132px; width:250px;"><img id="volumeSize" src="images/volume/yl_pic1_0.png" /></div>
+		<div style="position:absolute; left:183px; top:10px; height:132px; width:250px; z-index:2"><img id="volumeMute" src="" /></div>
+		<div style="position:absolute; left:13px; top:190px; height:132px; width:250px;"><img id="volumeDel" src="images/volume/yl_pic1-.png" /></div>
+		<div style="position:absolute; left:345px; top:190px; height:132px; width:250px;"><img id="volumeAdd" src="images/volume/yl_pic1+.png" /></div>
+		<div style="position:absolute; left:172px; top:190px; height:34px; width:99px; text-aglin:center" id="volumLeft"><img id="volumeValue0" src="" /><img id="volumeValue1" src=""> <img id="volumeValue2" src=""> </div>
+		<div style="position:absolute; left:170px; top:265px; height:34px; width:33px;"><img src="images/volume/yl_pic1_vol.png"> </div>
+	</div>
+ </BODY>
+</HTML>

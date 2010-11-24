@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE>usbPromit</TITLE>
+  
+<script>
+var prostr=["未检测到移动设备","检测到移动设备","移动设备已删除","正在检索数据中...."];
+	
+document.onkeypress = grabEvent;
+document.onirkeypress = grabEvent;
+document.onsystemevent = grabEvent;
+function grabEvent(event) {	
+//	keycode
+//	switch(keycode) {
+	
+//	}
+}
+function init(){
+		var str=parseInt(window.location.href.split("?")[1]);
+		document.getElementById("prompgText").innerText=prostr[str];
+		document.getElementById("USBprompgDiv").style.webkitTransform="scale(1)";
+		setTimeout(function (){
+				document.getElementById("USBprompgDiv").style.webkitTransform="scale(0)";
+				setTimeout(iPanel.overlayFrame.close(),1000);
+				},2000);
+}	
+
+function exit(){
+	iPanel.overlayFrame.close();
+}	
+
+</script>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></HEAD>
+
+
+ <BODY style="background-color:transparent;"  onload="init();" onUnload="exit()">
+  <div id="USBprompgDiv" style="left:0px;top:0px;height:122px;width:539px;text-aglin:center;-webkit-transition-duration:300ms;background-image:url(images/vod/tck_bg1.png);-webkit-transform:scale(0)">
+  	<table width='539' border='0' cellspacing='0' cellpadding='0' >
+  			<tr>
+  				<td height='120' colspan='2' align='center' style='font-size:28px; color:#f6ff00;' id='prompgText'></td>
+  			</tr>
+  	</table>
+  </div>
+ </BODY>
+</HTML>

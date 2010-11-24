@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<params>
+			<group code="a">
+									<item param="pos-hdportal-001">
+				<type>pos</type>
+				<value>Position_746_20100603_sta_imsp</value>
+			</item>
+						<item param="pos-hdportal-002">
+				<type>pos</type>
+				<value>Position_747_20100603_sta_imsp</value>
+			</item>
+						<item param="pos-hdportal-003">
+				<type>pos</type>
+				<value>Position_748_20100603_sta_imsp</value>
+			</item>
+			       <item param="list-001">
+        <type>category</type>
+        <value>Category_823_20090707_GUANGZHOUCMS</value>
+      </item>
+			  		</group>
+  	</params>

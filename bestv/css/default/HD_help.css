@@ -1,0 +1,164 @@
+@CHARSET "UTF-8";
+
+body {
+	background-color:transparent;
+	width:1280px;
+	height:720px;
+	left:0px;
+	top:0px;
+	margin-left:0px;
+	margin-top:0px;
+	overflow:hidden;
+	background:url("../../images/help/help.gif") no-repeat;
+}
+
+#title {
+	position:absolute;
+	top:30px; 
+	height:30px; 
+	font-size:30px; 
+	width:626px; 
+	left:82px;
+	color:#FFFFFF;
+}
+
+#logo {
+	position:absolute;
+	top:23px; 
+	left:28px; 
+	width:48px; 
+	height:48px; 
+	background:url("../../images/help/logo.png") no-repeat;
+}
+
+
+#tvod_log {
+	position:absolute;
+	top:20px; 
+	left:10px; 
+	width:60px; 
+	height:57px; 
+	background:url("../../images/channel/catchuplog.png") no-repeat;
+	-webkit-transition-duration:500ms;
+	opacity:0;
+	z-index:10;
+}
+
+
+#iconup {
+	position:absolute;
+	top:77px; 
+	left:288px; 
+	width:48px; 
+	height:24px; 
+	background:url("../../images/default/up.png") no-repeat;
+	visibility:hidden;
+}
+	
+#icondown {
+	position:absolute; 
+	top:660px; 
+	left:288px; 
+	width:48px; 
+	height:24px; 
+	background:url("../../images/default/down.png") no-repeat;
+	visibility:hidden;
+}
+
+#page {
+	position:absolute; 
+	left:40px; 
+	top:651px; 
+	height:50px; 
+	width:200px; 
+	font-size:22px; 
+	color:#FFFFFF;
+}
+
+#main {
+	position:absolute; 
+	top: 0px;
+	left: 100px;
+	width:460px; 
+	height:720px; 
+	-webkit-transition-duration:500ms;
+	z-index:3;
+}
+
+.subTextTr{	
+	position:absolute;
+	width:407px;
+	height:40px;
+	font-size:28px;
+	line-height:40px;
+	color:#FFFFFF;
+	text-align:left;
+	padding-left: 33px;
+}
+
+#back {
+	position:absolute; 
+	top: 105px;
+	left: 80px;
+	width:486px;
+	height:87px;
+	background:url("../../images/help/back_focus.png") no-repeat;
+	-webkit-transition-duration:500ms;
+	z-index:1;
+}
+
+#introduce {
+	position:absolute; 
+	top: 525px;
+	left: 636px;
+	width:608px;
+	height:60px;
+	background:url("../../images/help/introduce_no_focus.png") no-repeat;
+	z-index:1;
+}
+
+#introduce_string {
+	position:absolute; 
+	left:636px; 
+	top:540px; 
+	height:50px; 
+	width:608px; 
+	font-size:30px; 
+	color:#FFFFFF;
+	text-align:center;
+	z-index:3;
+}
+
+#trailerFocus {
+	position:absolute; 
+	top: 37px;
+	left:628px;
+	width:621px;
+	height:487px;
+	background:url("../../images/help/trailorFocus.png") no-repeat;
+	visibility:hidden;
+	z-index:2;
+	-webkit-transform:scale(1.0); 
+}
+
+#tips {
+	position:absolute; 
+	left:648px; 
+	top:585px; 
+	height:92px; 
+	width:589px; 
+	font-size:24px; 
+	color:#434343;
+	line-height:30px;
+	text-align:left;
+	z-index:3;
+}
+
+#t0{top:129px;}
+#t1{top:194px;}
+#t2{top:258px;}
+#t3{top:323px;}
+#t4{top:389px;}
+#t5{top:455px;}
+#t6{top:521px;}
+#t7{top:587px;}

@@ -1,0 +1,215 @@
+@CHARSET "UTF-8";
+
+body {
+	background-color:transparent;
+	width:1280px;
+	height:720px;
+	left:0px;
+	top:0px;
+	margin-left:px;
+	margin-top:0px;
+	overflow:hidden;
+	background:url("../../images/pay/order.jpg") no-repeat;
+}
+
+#record {
+	position:absolute;
+	top:185px; 
+	left:120px; 
+	width:258px; 
+	height:167px; 
+	background:url("../../images/pay/disk.png") no-repeat;
+	z-index:1;
+}
+
+
+#affirmance {
+	position:absolute;
+	top:562px; 
+	left:497px; 
+	width:157px; 
+	height:70px; 
+	background:url("../../images/pay/buy_focus.png") no-repeat;
+	z-index:1;
+}
+
+#return {
+	position:absolute;
+	top:562px; 
+	left:680px; 
+	width:235px; 
+	height:67px; 
+	background:url("../../images/pay/return.png") no-repeat;
+	z-index:1;
+}
+
+#information {
+	position:absolute;
+	left:409px;
+	top:88px;
+	width:751px;
+	height:173px;
+}
+
+#program {
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:38px;
+	width:150px;
+	font-size:30px;
+	color:#83D8FF;
+	text-align:right;
+}
+
+#program_name {
+	position:absolute;
+	top:-5px;
+	left:142px;
+	height:40px;
+	width:650px;
+	font-size:40px;
+	color:#FFFFFF;
+	text-align:left;
+}
+
+#description {
+	position:absolute;
+	top:65px;
+	left:0px;
+	height:38px;
+	width:150px;
+	font-size:30px;
+	color:#83D8FF;
+	text-align:right;
+}
+
+#description_value {
+	position:absolute;
+	top:55px;
+	left:142px;
+	height:122px;
+	width:666px;
+	font-size:30px;
+	color:#FFFFFF;
+	text-align:left;
+	line-height:45px;
+}
+
+#detail {
+	position:absolute;
+	left:405px;
+	top:310px;
+	width:886px;
+	height:217px;
+}
+
+#valide {
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:38px;
+	width:150px;
+	font-size:30px;
+	color:#83D8FF;
+	text-align:right;
+}
+
+#valide_name {
+	position:absolute;
+	top:0px;
+	left:142px;
+	height:40px;
+	width:650px;
+	font-size:30px;
+	color:#FFFFFF;
+	text-align:left;
+}
+
+#pay {
+	position:absolute;
+	top:45px;
+	left:0px;
+	height:38px;
+	width:150px;
+	font-size:30px;
+	color:#83D8FF;
+	text-align:right;
+}
+
+#pay_name {
+	position:absolute;
+	top:45px;
+	left:142px;
+	height:40px;
+	width:650px;
+	font-size:30px;
+	color:#FFFFFF;
+	text-align:left;
+}
+
+#sales {
+	position:absolute;
+	top:90px;
+	left:0px;
+	height:38px;
+	width:150px;
+	font-size:30px;
+	color:#83D8FF;
+	text-align:right;
+}
+
+#sales_name {
+	position:absolute;
+	top:90px;
+	left:142px;
+	height:40px;
+	width:650px;
+	font-size:30px;
+	color:#56E400;
+	text-align:left;
+}
+
+#price {
+	position:absolute;
+	top:135px;
+	left:0px;
+	height:38px;
+	width:150px;
+	font-size:30px;
+	color:#83D8FF;
+	text-align:right;
+}
+
+#price_name {
+	position:absolute;
+	top:135px;
+	left:142px;
+	height:40px;
+	width:650px;
+	font-size:30px;
+	color:#83D8FF;
+	text-align:left;
+}
+
+#little {
+	position:absolute;
+	top:180px;
+	left:-62px;
+	height:38px;
+	width:200px;
+	font-size:30px;
+	color:#83D8FF;
+	text-align:right;
+}
+
+#little_name {
+	position:absolute;
+	top:180px;
+	left:142px;
+	height:40px;
+	width:650px;
+	font-size:30px;
+	color:#83D8FF;
+	text-align:left;
+}

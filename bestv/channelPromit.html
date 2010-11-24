@@ -1,0 +1,47 @@
+﻿<HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+<TITLE> Mute </TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+document.onkeypress = grabEvent;
+document.onirkeypress = grabEvent;
+document.onsystemevent = grabEvent;
+function grabEvent(event) {	
+			
+}	
+function init(){
+	var urlstr=window.location.href.split("?")[1];
+	$("channelPrompgText").innerText="频道<"+urlstr+">不存在";
+	$("displayTips").style.webkitTransitionDuration = "300ms";
+	$("displayTips").style.webkitTransform = "scale(1)";
+	setTimeout(function(){
+		$("displayTips").style.webkitTransform = "scale(0)";
+	},2000);
+}
+	
+function exit(){
+		iPanel.overlayFrame.close();
+}	
+	
+function $(id){
+	return document.getElementById(id);
+}
+	</script>
+
+ </HEAD>
+ 
+
+ <BODY style="background-color:transparent;" onLoad="init()" onUnload="exit()">
+		<div id="displayTips" style="position:absolute;left:0px;top:0px;height:241px;width:576px;background:url(images/vod/tck_bg2.png) no-repeat;text-aglin:center;-webkit-transition-duration:300ms;-webkit-transform:scale(0)">
+			<table width='576' border='0' cellspacing='0' cellpadding='0' >
+					<tr>
+						<td height='120' colspan='2' align='center' style='font-size:40px; color:#f6ff00;' vaglin='bottom' id='channelPrompgText'></td>
+					</tr>
+					<tr>
+						<td height='120' colspan='2' valign='top' align='center' style='font-size:40px; color:#f6ff00;' >请切换到其他频道观看</td>
+					</tr>
+			</table>
+		</div>
+ </BODY>
+</HTML>

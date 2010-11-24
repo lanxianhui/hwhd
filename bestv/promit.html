@@ -1,0 +1,97 @@
+﻿<HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+<TITLE> Mute </TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+	var str=[{name:"您是否进入频道页面",url:"HD_channelPortal.jsp"},
+					 {name:"您是否进入点播页面",url:"HD_vod.jsp"},
+					 {name:"您是否进入回看页面",url:"HD_channelPortal.jsp?CHANNELID=001"},
+					 {name:"您是否进入首页",url:""},
+					 {name:"您是否进入上一集",url:""},
+					 {name:"您是否进入下一集",url:""},
+					 {name:"对不起，没有上一集",url:""},
+					 {name:"对不起，没有下一集",url:""}];
+		
+document.onkeypress = grabEvent;
+document.onirkeypress = grabEvent;
+document.onsystemevent = grabEvent;
+	function grabEvent(event) {	
+			var keycode = event.which;
+			switch(keycode){
+				case 3:
+				case 37://左
+					$("tipSelect").src= "images/channel/tipSelectFoucs.png";
+					$("tipReturn").src= "images/channel/tipReturn.png";
+					isTrue=true;
+					return 0;
+					break;
+				case 4:
+				case 39://右
+					 $("tipSelect").src= "images/channel/tipSelect.png";
+					 $("tipReturn").src= "images/channel/tipReturnFoucs.png";
+					 isTrue=false;
+					 return 0;
+					break;
+				case 13:
+					$("displayTips").style.webkitTransform = "scale(0)";
+					if(isTrue&&str[where].url!=""&&typeof(str[where].url)!=undefined){
+							// $("tipString").innerText=str[where].url;	
+							setTimeout(function (){
+								if(where==0) {
+									if(typeof(iPanel.eventFrame.ccp)=="undefined"||iPanel.eventFrame.ccp=="") iPanel.mainFrame.location="HD_channelPortal.jsp";
+									else{
+										if(iPanel.eventFrame.cs=="hd") iPanel.mainFrame.location="HD_playliveControl.jsp?source=hd&currentNum="+iPanel.eventFrame.ccp;
+										else iPanel.mainFrame.location="HD_playliveControl.jsp?currentNum="+iPanel.eventFrame.ccp;
+									}	
+								}else{
+									iPanel.mainFrame.location=str[where].url
+								}	
+								iPanel.overlayFrame.close();
+								},300);	
+					}		 
+					else{
+						setTimeout("exit()",300);
+					}
+					return 0;
+					break;	
+			}	
+			return 0;	
+	}	
+
+	var where=-1;
+	var isTrue=true;
+	function init(){
+		var strurl0=window.location.href;
+		var strurl1=strurl0.split("?");
+		where=parseInt(strurl1[1]);
+		if(strurl1.length>2){
+			if(strurl0.indexOf("nextTVUrl")>-1){
+				str[where].url = strurl0.split("nextTVUrl=")[1];
+			}
+		}
+		$("tipString").innerText=str[where].name;
+		$("displayTips").style.webkitTransitionDuration = "300ms";
+		$("displayTips").style.webkitTransform = "scale(1)";
+	}
+	
+	function exit(){
+			iPanel.overlayFrame.close();
+	}	
+	
+	
+	function $(id){
+		return document.getElementById(id);
+	}
+	</script>
+
+ </HEAD>
+
+ <BODY style="background-color:transparent;" onLoad="init()" onUnload="exit()">
+		<div id="displayTips" style="position:absolute;left:0px;top:0px;height:220px;width:748px;background:url(images/channel/displayTips.png) no-repeat;-webkit-transition-duration:300ms;-webkit-transform:scale(0)">
+				<div id="tipString" style="position:absolute;left:0px;top:40px;width:748px;height:40px;color:#FFFF00;text-align:center;font-size:40px"></div> 
+				<div style="position:absolute;left:200px;top:100px;width:155px;height:70px"><img id="tipSelect" src="images/channel/tipSelectFoucs.png"/></div>
+				<div style="position:absolute;left:400px;top:100px;width:155px;height:70px"><img id="tipReturn" src="images/channel/tipReturn.png"/></div>	
+		</div>
+ </BODY>
+</HTML>

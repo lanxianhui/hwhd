@@ -1,0 +1,358 @@
+@CHARSET "UTF-8";
+body {
+	background-color:transparent;
+	width:1280px;
+	height:720px;
+	left:0px;
+	top:0px;
+	margin-left:0px;
+	margin-top:0px;
+	overflow:hidden;
+	background:url("../../images/pay/index.jpg") no-repeat;
+	visibility:hidden;
+}
+
+#protection {
+	visibility:hidden;
+}
+#name {
+	position:absolute;
+	height:40px; 
+	width:700px;
+	align:center;
+	font-size:40px; 
+	color:#FFFFFF;
+}
+
+#logo {
+	position:absolute;
+	width:240px; 
+	height:350px; 
+	z-index:1;
+	border-radius:8px;
+}
+
+#cover {
+	position:absolute;
+	top:163px; 
+	left:60px; 
+	width:263px; 
+	height:374px; 
+	background:url("../../images/pay/post_cover.png") no-repeat;
+	z-index:1;
+}
+
+#icon_post {
+	position:absolute;
+	top:551px; 
+	left:65px; 
+	width:263px; 
+	height:46px; 
+	background:url("../../images/pay/icon_post_sd.png") no-repeat;
+	z-index:1;
+}
+
+#buy {
+	position:absolute;
+	top:265px; 
+	left:369px; 
+	width:152px; 
+	height:67px; 
+	background:url("../../images/pay/buy.png") no-repeat;
+	z-index:1;
+}
+
+#return {
+	position:absolute;
+	top:265px; 
+	left:542px; 
+	width:152px; 
+	height:67px; 
+	background:url("../../images/pay/return.png") no-repeat;
+	z-index:1;
+}
+
+#recommend {
+	position:absolute;
+	width:360px; 
+	height:293px; 
+	background:url("../../images/pay/recommend.png") no-repeat;
+	visibility:hidden;
+	z-index:1;
+}
+
+#recommend_1 {
+	position:absolute;
+	top:90px;
+	left:30px;
+	height:30px; 
+	width:236px;
+	font-size:30px; 
+	color:#2E5595;
+	z-index:5;
+}
+
+#recommend_2 {
+	position:absolute;
+	top:128px;
+	left:30px;
+	height:30px; 
+	width:236px;
+	font-size:26px; 
+	color:#393939;
+	z-index:5;
+}
+
+#recommend_3 {
+	position:absolute;
+	top:165px;
+	left:30px;
+	height:30px; 
+	width:236px;
+	font-size:26px; 
+	color:#393939;
+	z-index:5;
+}
+
+#recommend_buy {
+	position:absolute;
+	top:205px; 
+	left:100px; 
+	width:143px; 
+	height:79px; 
+	background:url("../../images/pay/recommend_buy.png") no-repeat;
+	z-index:2;
+}
+
+#recommend_money {
+	position:absolute;
+	width:176px; 
+	height:175px; 
+	background:url("../../images/pay/recommend_money.png") no-repeat;
+	visibility:hidden;
+	z-index:3;
+}
+
+#price_0 {
+	position:absolute;
+	top:70px; 
+	left:25px; 
+	width:33px; 
+	height:35px; 
+	z-index:15;
+}
+
+#price_1 {
+	position:absolute;
+	top:70px; 
+	left:60px; 
+	width:33px; 
+	height:35px; 
+	z-index:15;
+}
+
+#price_2 {
+	position:absolute;
+	top:70px; 
+	left:95px; 
+	width:33px; 
+	height:35px; 
+	z-index:15;
+}
+
+#price_3 {
+	position:absolute;
+	top:80px; 
+	left:130px; 
+	width:33px; 
+	height:35px;
+	z-index:15;
+	background:url("../../images/pay/money.png") no-repeat;
+}
+
+#popularity {
+	position:absolute;
+	top:400px; 
+	left:843px; 
+	width:360px; 
+	height:293px; 
+	background:url("../../images/pay/popularity.png") no-repeat;
+	visibility:hidden;
+	z-index:1;
+}
+
+#popularity_1 {
+	position:absolute;
+	top:90px;
+	left:30px;
+	height:30px; 
+	width:236px;
+	font-size:30px; 
+	color:#A64A00;
+	z-index:5;
+}
+
+#popularity_2 {
+	position:absolute;
+	top:128px;
+	left:30px;
+	height:30px; 
+	width:236px;
+	font-size:26px; 
+	color:#393939;
+	z-index:5;
+}
+
+#buy_tips {
+	position:absolute;
+	top:633px;
+	left:95px;
+	visibility:hidden;
+	z-index:5;
+}
+
+#tips {
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:30px; 
+	width:155px;
+	font-size:30px; 
+	color:#ffffff;
+	z-index:6;
+}
+
+#tipString {
+	position:absolute;
+	top:2px;
+	left:160px;
+	height:30px; 
+	width:510px;
+	font-size:26px; 
+	color:#ffffff;
+	z-index:6;
+}
+
+#warning {
+	position:absolute;
+	top:40px;
+	left:0px;
+	height:30px; 
+	width:510px;
+	font-size:28px; 
+	color:#ffffff;
+	z-index:6;
+}
+
+#popularity_3 {
+	position:absolute;
+	top:165px;
+	left:30px;
+	height:30px; 
+	width:236px;
+	font-size:26px; 
+	color:#393939;
+	z-index:5;
+}
+
+#popularity_buy {
+	position:absolute;
+	top:205px; 
+	left:100px; 
+	width:143px; 
+	height:79px; 
+	background:url("../../images/pay/recommend_buy.png") no-repeat;
+	z-index:2;
+}
+
+#popularity_money {
+	position:absolute;
+	top:357px; 
+	left:1077px; 
+	width:176px; 
+	height:175px; 
+	background:url("../../images/pay/popularity_money.png") no-repeat;
+	visibility:hidden;
+	z-index:3;
+}
+
+#money_0 {
+	position:absolute;
+	top:70px; 
+	left:25px; 
+	width:33px; 
+	height:35px; 
+	z-index:15;
+}
+
+#money_1 {
+	position:absolute;
+	top:70px; 
+	left:60px; 
+	width:33px; 
+	height:35px; 
+	z-index:15;
+}
+
+#money_2 {
+	position:absolute;
+	top:70px; 
+	left:95px; 
+	width:33px; 
+	height:35px; 
+	z-index:15;
+}
+
+#money_3 {
+	position:absolute;
+	top:80px; 
+	left:130px; 
+	width:33px; 
+	height:35px; 
+	background:url("../../images/pay/money.png") no-repeat;
+	z-index:15;
+}
+
+#tariff {
+	position:absolute;
+	top:401px;
+	left:349px;
+	height:30px; 
+	width:80px;
+	font-size:30px; 
+	color:#83D8FF;
+	z-index:5;
+}
+
+#tariff_money {
+	position:absolute;
+	top:401px;
+	left:424px;
+	height:30px; 
+	width:250px;
+	font-size:30px; 
+	color:#FFE400;
+	z-index:5;
+}
+
+#expires {
+	position:absolute;
+	top:450px;
+	left:349px;
+	height:30px; 
+	width:120px;
+	font-size:30px; 
+	color:#83D8FF;
+	z-index:5;
+}
+
+#expression {
+	position:absolute;
+	top:450px;
+	left:459px;
+	height:30px; 
+	width:300px;
+	font-size:30px; 
+	color:#FFE400;
+	z-index:5;
+}

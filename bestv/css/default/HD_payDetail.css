@@ -1,0 +1,128 @@
+@CHARSET "UTF-8";
+
+body {
+	background-color:transparent;
+	width:1280px;
+	height:720px;
+	left:0px;
+	top:0px;
+	margin-left:px;
+	margin-top:0px;
+	overflow:hidden;
+	background:url("../../images/pay/detail.jpg") no-repeat;
+}
+
+#record {
+	position:absolute;
+	top:150px; 
+	left:156px; 
+	width:239px; 
+	height:226px; 
+	background:url("../../images/pay/record.png") no-repeat;
+	z-index:1;
+}
+
+#affirmance {
+	position:absolute;
+	top:430px; 
+	left:411px; 
+	width:237px; 
+	height:70px; 
+	background:url("../../images/pay/affirmance_focus.png") no-repeat;
+	z-index:1;
+}
+
+#return {
+	position:absolute;
+	top:430px; 
+	left:700px; 
+	width:235px; 
+	height:67px; 
+	background:url("../../images/pay/return.png") no-repeat;
+	z-index:1;
+}
+
+#introduce {
+	position:absolute;
+	top:530px;
+	left:158px;
+	height:120px;
+	width:946px;
+	line-height:40px;
+	font-size:26px;
+	color:#FFFFFF;
+}
+
+#information {
+	position:absolute;
+	left:429px;
+	top:193px;
+	width:751px;
+	height:173px;
+}
+
+#program {
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:38px;
+	width:200px;
+	font-size:30px;
+	color:#83D8FF;
+	text-align:right;
+}
+
+#program_name {
+	position:absolute;
+	top:-5px;
+	left:220px;
+	height:40px;
+	width:650px;
+	font-size:40px;
+	color:#FFFFFF;
+	text-align:left;
+}
+
+#money {
+	position:absolute;
+	top:65px;
+	left:0px;
+	height:38px;
+	width:200px;
+	font-size:30px;
+	color:#83D8FF;
+	text-align:right;
+}
+
+#money_name {
+	position:absolute;
+	top:65px;
+	left:220px;
+	height:40px;
+	width:650px;
+	font-size:30px;
+	color:#83D8FF;
+	text-align:left;
+}
+
+#validate {
+	position:absolute;
+	top:125px;
+	left:0px;
+	height:38px;
+	width:200px;
+	font-size:30px;
+	color:#83D8FF;
+	text-align:right;
+}
+
+#validate_name {
+	position:absolute;
+	top:125px;
+	left:220px;
+	height:40px;
+	width:650px;
+	font-size:30px;
+	color:#83D8FF;
+	text-align:left;
+}
